@@ -23,6 +23,7 @@ import (
 )
 
 func main() {
+    // plase use golang.org/x/text/cmd/gotext for build catalog
     c := catalog.NewBuilder(catalog.Fallback(language.English))
     c.SetString(language.English, "Hello World", "Hello World")
     c.SetString(language.French, "Hello World", "Bonjour le monde")

@@ -92,6 +92,20 @@ func TestTranslatorWithDefaultLocale(t *testing.T) {
 	assert.Equal(t, "Bonjour le monde", trans.Translate(tagToContext(language.Italian), "Hello World"))
 }
 
+func TestTranslatorPlural(t *testing.T) {
+	trans := New([]language.Tag{language.English, language.French})
+
+	totalBookCount := 1
+
+	assert.Equal(t, "One book available", trans.Translate(tagToContext(language.English), "%d books available", totalBookCount))
+	assert.Equal(t, "Un livre disponible", trans.Translate(tagToContext(language.French), "%d books available", totalBookCount))
+
+	totalBookCount += 1
+
+	assert.Equal(t, "2 books available", trans.Translate(tagToContext(language.English), "%d books available", totalBookCount))
+	assert.Equal(t, "2 livres disponibles", trans.Translate(tagToContext(language.French), "%d books available", totalBookCount))
+}
+
 func BenchmarkGetSupportedLocale(b *testing.B) {
 	trans := New([]language.Tag{language.English, language.French})
 
