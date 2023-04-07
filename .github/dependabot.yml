@@ -8,3 +8,11 @@ updates:
   open-pull-requests-limit: 10
   assignees:
   - euskadi31
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: weekly
+  assignees:
+  - euskadi31
+  
+  
