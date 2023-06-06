@@ -8,7 +8,7 @@ import (
 	"golang.org/x/text/language"
 )
 
-//nolint: forbidigo
+// nolint: forbidigo
 func main() {
 	trans := translation.New([]language.Tag{
 		language.English,
