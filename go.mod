@@ -1,11 +1,11 @@
 module github.com/hyperscale-stack/translation
 
-go 1.23.0
+go 1.24.0
 
 require (
 	github.com/hyperscale-stack/locale v1.0.0
 	github.com/stretchr/testify v1.11.1
-	golang.org/x/text v0.28.0
+	golang.org/x/text v0.29.0
 )
 
 require (
